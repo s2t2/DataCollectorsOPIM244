@@ -10,20 +10,6 @@ from app.yelp_data import yelpAPIfunction
 
 yelp_routes = Blueprint("yelp_routes", __name__)
 
-
-#Innovo Yelp password page
-@yelp_routes.route("/yelpAPI_password", methods=["Get","Post"])
-def yelpAPI_Password():
-    if request.method == "POST":
-        if str(request.form["Innovo Yelp Password"]) == os.environ['INNOVO_PASSWORD']:        
-            return redirect("/yelpAPISuperSneaky546627!")
-        
-        else:
-            flash("Please re-enter. The password was incorrect.")
-            
-    return render_template("yelpAPI_password.html")
-
-
 #Yelp API
 @yelp_routes.route("/yelpAPI", methods=["Get","Post"])
 def yelpAPI():

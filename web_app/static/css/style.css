@@ -3,24 +3,11 @@
     height: 200px;
     width: 200px;
     transition: width 0.75s, height 0.75s;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   
   #Icon:hover {
-    height: 225px;
-    width: 225px;
-  }
-
-  #Icon-NYT {
-    height: 200px;
-    width: 200px;
-    transition: width 0.75s, height 0.75s;
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  
-  #Icon-NYT:hover {
     height: 225px;
     width: 225px;
   }
@@ -193,6 +180,10 @@
     max-height: 42.5px;
     max-width: 42.5px;
     margin-left: 0.1vw;
+  }
+
+  #container_home {
+    margin-top: 25px;
   }
 
   

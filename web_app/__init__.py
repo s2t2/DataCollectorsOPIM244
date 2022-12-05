@@ -8,10 +8,7 @@ from flask import Flask
 from web_app.routes.home_routes import home_routes
 from web_app.routes.about_routes import about_routes
 from web_app.routes.twitter_routes import twitter_routes
-from web_app.routes.census_routes import census_routes
 from web_app.routes.yelp_routes import yelp_routes
-from web_app.routes.finance_routes import finance_routes
-from web_app.routes.marketing_routes import marketing_routes
 from web_app.routes.NYT_routes import NYT_routes
 
 
@@ -27,10 +24,7 @@ def create_app():
     app.register_blueprint(home_routes)
     app.register_blueprint(about_routes)
     app.register_blueprint(twitter_routes)
-    app.register_blueprint(census_routes)
     app.register_blueprint(yelp_routes)
-    app.register_blueprint(finance_routes)
-    app.register_blueprint(marketing_routes)
     app.register_blueprint(NYT_routes)
 
 

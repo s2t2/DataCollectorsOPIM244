@@ -10,20 +10,6 @@ from app.twitter_data import twitterAPIfunction
 
 twitter_routes = Blueprint("twitter_routes", __name__)
 
-
-#Innovo Twitter password page
-@twitter_routes.route("/twitterAPI_password", methods=["Get","Post"])
-def twitterAPI_Password():
-    if request.method == "POST":
-        if str(request.form["Innovo Twitter Password"]) == os.environ['INNOVO_PASSWORD']:        
-            return redirect("/twitterAPISuperSneaky546627!")
-        
-        else:
-            flash("Please re-enter. The password was incorrect.")
-            
-    return render_template("twitterAPI_password.html")
-
-
 #Twitter API
 @twitter_routes.route("/twitterAPI", methods=["Get","Post"])
 def twitterAPI():

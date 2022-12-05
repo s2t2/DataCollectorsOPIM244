@@ -10,20 +10,6 @@ from app.NYT_data import NYTAPIfunction
 
 NYT_routes = Blueprint("NYT_routes", __name__)
 
-
-#Innovo NYT password page
-@NYT_routes.route("/NYTAPI_password", methods=["Get","Post"])
-def NYTAPI_Password():
-    if request.method == "POST":
-        if str(request.form["Innovo NYT Password"]) == os.environ['INNOVO_PASSWORD']:        
-            return redirect("/NYTAPISuperSneaky546627!")
-        
-        else:
-            flash("Please re-enter. The password was incorrect.")
-            
-    return render_template("NYTAPI_password.html")
-
-
 #NYT API
 @NYT_routes.route("/NYTAPI", methods=["Get","Post"])
 def NYTAPI():

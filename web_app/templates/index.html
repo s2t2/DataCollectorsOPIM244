@@ -1,26 +1,20 @@
-{% extends "bootstrap_5_layout_Flat_Footer.html" %}
+{% extends "bootstrap_5_layout.html" %}
 {% set active_page = "home" %}
 
 {% block content %}
 
 <center>
-<div class="container">
-  <h1 id="index_header">Innovo Consulting Web Applications</h1>
-  <p id="index_info">Business intelligence tools for consultants and small businesses.</p>
+
+<div id="container_home">
+  <h1 id="index_header">Open Business Intelligence</h1>
+  <p id="index_info">Publicly available data collectors for small businesses.</p>
   
     <a href = "/yelpAPI"><img id="Icon" src="{{ url_for("static", filename="Yelp Button.svg")}}"/></a>
 
-    <a href = "/IndustryAnalysis"><img id="Icon" src="{{ url_for("static", filename="Industry Analysis Button.svg")}}"/></a> 
-
     <a href = "/twitterAPI"><img id="Icon" src="{{ url_for("static", filename="Twitter Data Button.svg")}}"/></a> 
-
-    <br>
    
     <a href = "/NYTAPI"><img id="Icon" src="{{ url_for("static", filename="NYTimes Button.svg")}}"/></a>
 
-    <a href = "/FinancialStatements"><img id="Icon" src="{{ url_for("static", filename="Financial Statements Button.svg")}}"/></a>
-    
-    <a href = "/MarketingTools"><img id="Icon" src="{{ url_for("static", filename="Marketing Tools Button.svg")}}"/></a>
   <br>
 
 </div>
