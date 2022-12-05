@@ -1,5 +1,5 @@
 # InnovoWebTools
-This repository is a web application developed for the student run consulting agency Innovo Consulting, which operates at Georgetown University.
+This repository fo my final in OPIM 244
 
 https://innovowebapplications.herokuapp.com/home
 
@@ -9,9 +9,9 @@ https://innovowebapplications.herokuapp.com/home
 Create and activate a virtual environment:
 
 ```sh
-conda create -n innovowebtools-env python=3.8
+conda create -n datacollectors-env python=3.8
 
-conda activate innovowebtools-env
+conda activate datacollectors-env
 ```
 
 Install package dependencies:
@@ -25,13 +25,18 @@ pip install -r requirements.txt
 Create a local ".env" file and provide your API keys like this:
 
 ```sh
-FLASK_PASSWORD="______________"
-FACEBOOK_ACCESS_TOKEN="______________"
-INNOVO_PASSWORD="______________"
-TWITTER_ACCESS_TOKEN="______________"
-TWITTER_ACCESS_TOKEN_SECRET="______________"
-TWITTER_API_KEY="______________"
-TWITTER_API_KEY_SECRET="______________"
+
+TWITTER_ACCESS_TOKEN="________"
+TWITTER_ACCESS_TOKEN_SECRET="________"
+TWITTER_API_KEY="________"
+TWITTER_API_KEY_SECRET="________"
+
+YELP_API_KEY="________"
+
+NYT_API_KEY="________"
+
+FLASK_APP=web_app
+FLASK_PASSWORD="________"
 ```
 
 ## Usage
