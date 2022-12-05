@@ -1,0 +1,38 @@
+{% extends "bootstrap_5_layout_Fixed_Footer.html" %}
+{% set active_page = "twitter_API" %}
+
+{% block content %}
+
+
+  <div id="API_Header">
+    <h2>Twitter API</h2>
+  </div>
+
+  <div class="content">
+    <form method="POST">
+      <label for="user_twitter">Account:</label>
+      <input class="input" type="text" name="user_twitter" id="user_twitter">
+      <br>
+      <br>
+      <div class="content">
+        <input class="btn btn-primary" type="submit" value="Download">
+      </div>
+    </form>
+  </div>
+
+  <div class="content">
+    <div id="API_info_Twitter">
+      <p>
+        Please enter any Twitter account. 
+        <br> An Excel file will download with data on the account's most recent 500 tweets.
+      </p>
+    </div>
+  </div> 
+<!--
+{% for message in get_flashed_messages()%}
+<p class="error"> {{message}} </p>
+{% endfor %}
+-->
+</div>
+
+{% endblock %}

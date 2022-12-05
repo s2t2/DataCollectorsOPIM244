@@ -1,0 +1,54 @@
+{% extends "bootstrap_5_layout_Flat_Footer.html" %}
+{% set active_page = "financial_statements" %}
+
+{% block content %}
+
+
+<center>
+<h2>Social Media Post Templates</h2>
+<p>(Click to Download)</p>
+
+<a href="/PostTemplate1"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_1.png")}}"/></a>
+<a href="/PostTemplate2"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_2.png")}}"/></a>
+<a href="/PostTemplate3"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_3.png")}}"/></a>
+<a href="/PostTemplate4"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_4.png")}}"/></a>
+<a href="/PostTemplate5"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_5.png")}}"/></a>
+<a href="/PostTemplate6"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_6.png")}}"/></a>
+<a href="/PostTemplate7"><img class="img-fluid" id="postTemplates" src="{{ url_for("static", filename="Social Media Templates_Page_7.png")}}"/></a>
+
+<br>
+<br>
+<br>
+
+<h2>Social Media Audit</h2>
+
+<form method="POST">
+  <label id=marketingForm for="platform">Platform:</label>
+    <select class="form_button" id="platform" name="platform">
+      <option value="all">All</option>
+      <option value="instagram">Instagram</option>
+      <option value="facebook">Facebook</option>
+      <option value="tiktok">TikTok</option>
+      <option value="twitter">Twitter</option>
+      <option value="linkedin">LinkedIn</option>
+      <option value="pinterest">Pinterest</option>
+    </select>
+  <div class="content">
+    <input class="btn btn-primary" type="submit" value="Download">
+  </div>
+</form>
+
+<div class="content">
+  <div class="API_info">
+    <p>
+      Download an Excel template for organizing social media strategy and monitoring KPIs.
+    </p>
+  </div>
+</div> 
+
+<img class="img-fluid" id="FinancialStatementImage" src="{{ url_for("static", filename="Social Media Audit Cover.png")}}"/>
+
+
+
+
+{% endblock %}

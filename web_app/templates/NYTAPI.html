@@ -1,0 +1,50 @@
+{% extends "bootstrap_5_layout_Flat_Footer.html" %}
+{% set active_page = "NYTAPI" %}
+
+{% block content %}
+
+  <div id="API_Header">
+    <h2>New York Times API</h2>
+  </div>
+  
+  <div class="content">
+    <form method="POST">
+      <label for="user_topic">Topic:</label>
+      <input class="input" type="text" name="user_topic" id="user_topic">
+      <br>
+      <br>
+      <label for="user_date_range">Time frame:</label>
+        <select class="form_button" id="user_date_range" name="user_date_range">
+          <option value="1 Week">1 Week</option>
+          <option value="1 Month">1 Month</option>
+          <option value="6 Months">6 Months</option>
+          <option value="1 Year">1 Year</option>
+      </select>
+      <br>
+      <br>
+      <div class="content">
+        <input class="btn btn-primary" type="submit" value="Download">
+      </div>
+    </form>
+  </div>
+  
+  <div class="content">
+    <div id="API_info_NYT">
+      <p>
+        Please enter any news topic. 
+        <br> An Excel file will download with data on <br> 100 New York Times articles.
+      </p>
+      <p id="API_Note">
+        *Note: the New York Times API has a maximum of 10 downloads per minute. If you 
+        are receiving an error, please try again in a couple minutes.
+      </p>
+    </div>
+  </div> 
+<!--
+{% for message in get_flashed_messages()%}
+<p class="error"> {{message}} </p>
+{% endfor %}
+-->
+</div>
+
+{% endblock %}

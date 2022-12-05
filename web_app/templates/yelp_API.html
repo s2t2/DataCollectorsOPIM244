@@ -1,0 +1,45 @@
+{% extends "bootstrap_5_layout_Fixed_Footer.html" %}
+{% set active_page = "Yelp_API" %}
+
+{% block content %}
+
+  <div id="API_Header">
+    <h2>Yelp API</h2>
+  </div>
+  
+  
+  <div class="content">
+    <form method="POST">
+      <label for="user_business">Business Type:</label>
+      <input class="input" type="text" name="user_business" id="user_business">
+    <br>
+    <br>
+      <div id="Yelp_Location_Adjust">
+        <label for="user_location">Location:</label>
+        <input class="input" type="text" name="user_location" id="user_location">
+      </div>
+    <br>
+      <div class="content">
+        <input class="btn btn-primary" type="submit" value="Download">
+      </div>
+    </form>
+  </div>
+ 
+  <div class="content">
+    <div id="API_info_Yelp">
+      <p>
+        Please enter any business type and location. 
+        <br> An Excel file will download with data on 50 local businesses.
+      </p>
+    </div>
+  </div> 
+
+  
+<!--
+{% for message in get_flashed_messages()%}
+<p class="error"> {{message}} </p>
+{% endfor %}
+-->
+</div>
+
+{% endblock %}

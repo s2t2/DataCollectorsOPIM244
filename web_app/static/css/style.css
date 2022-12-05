@@ -1,0 +1,473 @@
+
+  #Icon {
+    height: 200px;
+    width: 200px;
+    transition: width 0.75s, height 0.75s;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  
+  #Icon:hover {
+    height: 225px;
+    width: 225px;
+  }
+
+  #Icon-NYT {
+    height: 200px;
+    width: 200px;
+    transition: width 0.75s, height 0.75s;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  #Icon-NYT:hover {
+    height: 225px;
+    width: 225px;
+  }
+
+
+  #FinancialStatementImage {
+    height: auto;
+    width: 600px;
+    justify-content: center;
+    align-content: center;
+  }
+
+
+
+  body {
+    background-color: white;
+    color: #31538f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: "bold";
+    font-size: 20px;
+    margin: 0px;
+  }
+
+  nav {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: "bold";
+    font-size: 17px;
+  }
+
+  footer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: "bold";
+    font-size: 17px;
+  }
+
+  #curve {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    bottom: 0;
+  }
+
+  #curveFixed {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    bottom: 0;    
+  }
+
+  #bottomFooter {
+    background-color: #a72a5e;
+    width: 100%;
+    height: 30px;
+
+  }
+
+  li {
+    margin-bottom: 7.5px;
+    margin-top: 7.5px;
+  }
+
+  #liMarketingTools {
+    margin-bottom: 15px;
+    margin-top: 7.5px;
+  }
+
+  #liSherif {
+    margin-bottom: 7.5px;
+    margin-top: 25px;
+  }
+
+  #liNoah {
+    margin-bottom: 22.5px;
+    margin-top: 7.5px;
+  }
+
+  #about {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #marketingForm {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  #postTemplates {
+    height: 300px;
+    width: auto;
+    transition: width 0.75s, height 0.75s;
+    padding: 7.5px;
+  }
+  
+  #postTemplates:hover {
+    height: 325px;
+    width: auto;
+  }
+
+  #financeTitle {
+    margin-bottom: 20px;
+  }
+
+  .API_info {
+    max-width: 500px;
+    margin: 20px;
+  }
+
+  #API_info_Yelp {
+    max-width: 500px;
+    margin: 20px;
+    margin-left: 6vw;
+  }
+
+  #API_info_Twitter {
+    max-width: 500px;
+    margin: 20px;
+    margin-left: 11vw;
+  }
+
+  #API_info_NYT {
+    max-width: 500px;
+    margin: 20px;
+    margin-left: 9vw;
+  }
+
+  #API_info_Finance {
+    max-width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    font-size: 17px; 
+  }
+
+  #API_Header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #API_Note {
+    font-size: 15px;  
+  }
+
+  #Finance_Note {
+    font-size: 18px;  
+  }
+
+  #index_info {
+    margin-top: 15px;
+    margin-bottom: -10px;
+    font-size: 17px;
+  }
+
+  #Tableau_info {
+    max-width: 1000px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+
+  #index_header {
+    margin-bottom: -5px;
+  }
+
+  #innovoLogo {
+    max-height: 42.5px;
+    max-width: 42.5px;
+    margin-left: 0.1vw;
+  }
+
+  
+/*
+  background-color: #2A58A7;
+*/
+
+
+
+
+
+
+
+
+/*
+  body.scroll {
+    background-color: white;
+    color: #31538f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: "bold";
+    font-size: 20px;
+    margin: 0px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  */
+
+  
+  ul {
+    list-style-position: inside;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  /* code stolen from W3
+  div.container {
+    padding: 50px 50px 0px;
+  }*/
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .bottomTwo {
+    background-color: #fbab82;
+    padding: 30px 30px;
+    opacity: 0.75;
+  }
+  
+  .bottom {
+    background-color: #31538f;
+    padding: 300px 300px;
+  }
+  
+  #deleteLater{
+    color: #31538f;
+  }
+  
+  p, label {
+    font-weight: 300;
+  }
+  
+  .button {
+    background-color: #31538f;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 9px 15px;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: #31538f;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 9px 15px;
+    cursor: pointer;
+  }
+
+  .button2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    background-color: #31538f;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 9px 15px;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  
+  .button2:hover {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    background-color: white;
+    color: #31538f;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 9px 15px;
+    cursor: pointer;
+  }
+  
+  #type {
+    background-color: #31538f;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  
+  #type:hover {
+    background-color: white;
+    color: #31538f;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .form_button {
+    background-color: #31538f;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  
+  .form_button:hover {
+    background-color: white;
+    color: #31538f;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 2px solid #31538f;
+    margin: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  option {
+    background-color: white;
+    color: #31538f;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 5px 11px;
+  }
+  
+  .input {
+    background-color: white;
+    color: #31538f;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #31538f;
+    padding: 2px 7px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;
+  }
+
+  #Yelp_Location_Adjust {
+    padding-left: 52.5px;
+  }
+  
+  /*
+  code stolen from W3
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  input[type=number] {
+      -moz-appearance: textfield;
+  }
+   code stolen from W3
+  */
+
+  .curvers {
+    aspect-ratio: 960/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .layer {
+    background-image: url(./layered-waves-haikei.svg);
+  }
+
+
+  #aboutPage {
+    margin: 25px 50px;
+  }
+  
+  .aboutList {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: -25px;
+    margin-bottom: -10px;
+  }
+
+  #importantAboutList {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: -25px;
+    margin-bottom: -10px;
+    font-weight: 400;
+  }
+
+  
+
+ 
+
+
+  /*
+  .footerscroll {
+    background-color: #2A58A7;
+    padding: 20px;
+    margin-top: -10px;
+  }
+  */
+
+  .underline {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  .Twitter {
+    text-decoration: underline;
+    text-align: center;
+    margin-top: -14px;
+  }
+
+  #pickAccountButtons {
+    margin-top:-12.5px;
+  }
+
+  .error {
+    color: red;
+    text-align: center;
+  }

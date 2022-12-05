@@ -1,3 +1,11 @@
+# Additional stuff
+*.xlxs 
+#name the data folder: "data"
+data/*.xlxs
+
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

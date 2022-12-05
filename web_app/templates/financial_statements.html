@@ -1,0 +1,37 @@
+{% extends "bootstrap_5_layout_Flat_Footer.html" %}
+{% set active_page = "financial_statements" %}
+
+{% block content %}
+
+
+<center>
+<h2 id="financeTitle">Financial Statements</h2>
+
+  <div class="content">
+    <div id="API_info_Finance">
+      <p>
+        Download an Excel file with templates for the income statement, balance sheet, 
+        cash flow statement, and financial ratios.
+      </p>
+    </div>
+  </div> 
+
+<form method="POST">
+  <div class="content">
+    <input class="btn btn-primary" type="submit" value="Download">
+  </div>
+</form>
+<br>
+
+<img class="img-fluid" id="FinancialStatementImage" src="{{ url_for("static", filename="Financial Statement Image.png")}}"/>
+<br>
+<br>
+<p id="Finance_Note">
+  *Note: Innovo Consulting is not a registered financial advisor, planner, or broker.
+  Innovo Financial Statements are intended to only assist in your financial organization.
+  Your personal financial situation is unique, and before making any final decisions
+  you should consider obtaining additional information and advice from your accountant or other financial advisers.
+</p>
+
+</center>     
+{% endblock %}

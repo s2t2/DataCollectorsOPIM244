@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVEMYVEEMR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LVEMYVEEMR');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NZ932B8');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <!-- Will CSS -->
+    <link href="{{ url_for("static", filename="css/style.css")}}" rel="stylesheet">
+    
+    <!-- Will Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <title>Innovo Web Apps</title>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ932B8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--
+        FLASH MESSAGING
+        https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+        https://getbootstrap.com/docs/4.3/components/alerts/
+    -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+            <!--
+                BOOTSTRAP ALERTS
+                https://getbootstrap.com/docs/5.0/components/alerts/#dismissing
+            -->
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert" style="margin-bottom:0;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                {{ message }}
+            </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!--
+        SITE NAVIGATION & BOOTSTRAP NAV
+        https://jinja.palletsprojects.com/en/2.11.x/tricks/
+        https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    <!--
+        SITE NAVIGATION & BOOTSTRAP NAV
+        https://jinja.palletsprojects.com/en/2.11.x/tricks/
+        https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+    {% set nav_links = [
+        ('/tableau', 'tableau_examples', 'Tableau'),
+        ('https://www.innovoconsulting.org', 'innovo_consulting', 'Innovo'),
+        ('/about', 'about', 'About'),
+    ] -%}
+    {% set active_page = active_page|default('home') -%}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <!--a class="navbar-brand" href="/">My Web App</a-->
+            <a class="navbar-brand" href="/">
+                <!--
+                    ICONS
+                    https://icons.getbootstrap.com/
+                -->
+                <img id="innovoLogo" src="{{ url_for("static", filename="InnovoLogo.svg")}}">
+                &nbsp;
+                Innovo Web Apps
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% for href, page_id, link_text in nav_links %}
+                    {% if page_id == active_page %}
+                        {% set is_active = "active" -%}
+                    {% else %}
+                        {% set is_active = "" -%}
+                    {% endif %}
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ is_active }}" href="{{href}}">{{link_text}}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top:2em;">
+
+        <!--
+            PAGE CONTENTS
+        -->
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- 
+        <footer id="curve" style="margin-top:0em; margin-bottom:0em;">   
+            &copy; Copyright 2022 Innovo Consulting  
+        </footer>
+        -->
+    </div>
+
+    <!-- Will's Footer -->
+    <br>
+    <img id="curve" src="{{ url_for("static", filename="layered-waves-haikei.svg")}}">
+
+    <!-- <div id="bottomFooter"></div> -->
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    
+        console.log("Thanks for the page visit!")
+
+    </script>
+</body>
+</html>
