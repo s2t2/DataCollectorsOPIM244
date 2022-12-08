@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 import pandas as pd
 
-def test_yelp_API():
+def test_twitter_API():
 
     
     TWITTER_ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN")
@@ -17,7 +17,7 @@ def test_yelp_API():
                                 TWITTER_API_KEY_SECRET, "account", "POTUS")
 
     assert filename == "web_app/POTUS Twitter Data.xlsx"
-    assert len(tweets) >= 400
+    assert len(tweets) >= 200
 
 
     
