@@ -22,7 +22,7 @@ def twitterAPI():
             TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
             TWITTER_API_KEY_SECRET = os.getenv("TWITTER_API_KEY_SECRET")
 
-            file = twitterAPIfunction(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET, TWITTER_API_KEY, 
+            file, tweets = twitterAPIfunction(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET, TWITTER_API_KEY, 
                                         TWITTER_API_KEY_SECRET, user_API_type, user_twitter)
 
             #this was only required for the Twitter file

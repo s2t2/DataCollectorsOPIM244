@@ -211,4 +211,4 @@ def twitterAPIfunction(TWITTER_ACCESS_TOKEN_para, TWITTER_ACCESS_TOKEN_SECRET_pa
 
     excelFile.save(file_name)
 
-    return file_name
+    return file_name, tweetsList
