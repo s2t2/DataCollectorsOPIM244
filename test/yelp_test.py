@@ -12,7 +12,7 @@ def test_yelp_API():
 
     assert filename == "Yelp Data, Santa Monica, Coffee.xlsx"
     assert len(df1) == 50
-    assert "zip_code" in df1.columns
+    assert "zip_cod" in df1.columns
     assert "Categories" in df2.columns
 
     
