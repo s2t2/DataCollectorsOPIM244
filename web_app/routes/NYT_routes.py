@@ -19,7 +19,7 @@ def NYTAPI():
             user_date_range = str(request.form["user_date_range"])
             NYT_API_KEY = os.getenv("NYT_API_KEY")
 
-            file = NYTAPIfunction(NYT_API_KEY, user_topic, user_date_range)
+            file, df1, df2, df3, df4 = NYTAPIfunction(NYT_API_KEY, user_topic, user_date_range)
             return send_file(file, as_attachment = True)
 
         except:

@@ -111,7 +111,7 @@ def NYTAPIfunction(NYT_API_KEY_parameter, topic_parameter, date_range_parameter)
             list_sheet4.append(index_word)
 
     df_sheet4 = pd.DataFrame(list_sheet4)
-    df_sheet4 = df_sheet4.rename(columns={0:"Article Id", 1:"Main Headline Words"})
+    df_sheet4 = df_sheet4.rename(columns={0:"Article Id", 1:"Article Keywords"})
 
     #to Excel!
     df = df.rename(columns={"index":"Id"})
@@ -125,4 +125,4 @@ def NYTAPIfunction(NYT_API_KEY_parameter, topic_parameter, date_range_parameter)
         df_sheet4.to_excel(writer, sheet_name='Article Keywords')
 
     #ouput the file name
-    return file_name
+    return file_name, df, df_sheet2, df_sheet3, df_sheet4
