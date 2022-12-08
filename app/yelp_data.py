@@ -57,4 +57,4 @@ def yelpAPIfunction(YELP_API_KEY_parameter, search_term, location_parameter):
         df_sheet2.to_excel(writer, sheet_name='Categories')
 
     #ouput the file name
-    return excel_file_name
+    return excel_file_name, df, df_sheet2

@@ -19,7 +19,7 @@ def yelpAPI():
             user_location = str(request.form["user_location"])
             YELP_API_KEY = os.getenv("YELP_API_KEY")
 
-            file = yelpAPIfunction(YELP_API_KEY, user_business, user_location)
+            file, df1, df2 = yelpAPIfunction(YELP_API_KEY, user_business, user_location)
             return send_file(file, as_attachment = True)
 
         except:
