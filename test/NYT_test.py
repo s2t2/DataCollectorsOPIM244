@@ -15,5 +15,6 @@ def test_NYT_API():
     assert "Abstract Words" in df2.columns
     assert "Main Headline Words" in df3.columns
     assert "Article Keywords" in df4.columns
+    assert "test!" in df4.columns
 
     assert len(df1) >= 100
