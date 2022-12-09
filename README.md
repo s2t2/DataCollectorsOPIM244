@@ -1,7 +1,7 @@
 # Data Collectors OPIM 244
 https://datacollectors.herokuapp.com/
 
-This web application is my final for Managing Business Application Development in Python (OPIM 244) at Georgetown University. The application is a set of data aggregators intended to assist small business and student consultants.
+This web application is my final project for Managing Business Application Development in Python (OPIM 244) at Georgetown University. The application is a set of data collectors intended to assist small business and student consultants.
 
 ## Setup
 
@@ -23,9 +23,11 @@ pip install -r requirements.txt
 ## Configuration
 
 
-[Obtain an API Credentials](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) from Twitter (i.e. `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`, `TWITTER_API_KEY`, `TWITTER_API_KEY_SECRET`).
-[Obtain an API Credentials](https://docs.developer.yelp.com/docs/fusion-intro) from Yelp (i.e. `YELP_API_KEY`).
-[Obtain an API Credentials](https://developer.nytimes.com/) from New York Times (i.e. `NYT_API_KEY`).
+[Obtain Twitter API Credentials](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) (i.e. `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`, `TWITTER_API_KEY`, `TWITTER_API_KEY_SECRET`)
+
+[Obtain Yelp API Credentials](https://docs.developer.yelp.com/docs/fusion-intro) (i.e. `YELP_API_KEY`)
+
+[Obtain New York Times API Credentials](https://developer.nytimes.com/) (i.e. `NYT_API_KEY`).
 
 
 Then create a local ".env" file and provide the keys like this:
