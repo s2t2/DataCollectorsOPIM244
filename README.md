@@ -1,5 +1,7 @@
-# unemployment-inclass-2022
+# Data Collectors OPIM 244
+https://datacollectors.herokuapp.com/
 
+This web application is my final for Managing Business Application Development in Python (OPIM 244) at Georgetown University. The application is a set of data aggregators intended to assist small business and student consultants.
 
 ## Setup
 
@@ -7,9 +9,9 @@
 Create and activate a virtual environment:
 
 ```sh
-conda create -n unemployment-env python=3.8
+conda create -n datacollectors-env python=3.8
 
-conda activate unemployment-env
+conda activate datacollectors-env
 ```
 
 Install package dependencies:
@@ -21,18 +23,27 @@ pip install -r requirements.txt
 ## Configuration
 
 
-[Obtain an API Key](https://www.alphavantage.co/support/#api-key) from AlphaVantage (i.e. `ALPHAVANTAGE_API_KEY`).
+[Obtain an API Credentials](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) from Twitter (i.e. `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`, `TWITTER_API_KEY`, `TWITTER_API_KEY_SECRET`).
+[Obtain an API Credentials](https://docs.developer.yelp.com/docs/fusion-intro) from Yelp (i.e. `YELP_API_KEY`).
+[Obtain an API Credentials](https://developer.nytimes.com/) from New York Times (i.e. `NYT_API_KEY`).
 
-Also sign up for the [SendGrid Service](https://sendgrid.com/), verify your single sender address (i.e. `SENDER_EMAIL_ADDRESS`), and obtain an API Key (i.e. `SENDGRID_API_KEY`). See these [setup notes](https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/packages/sendgrid.md#setup) for more details.
 
 Then create a local ".env" file and provide the keys like this:
 
 ```sh
 # this is the ".env" file...
 
-ALPHAVANTAGE_API_KEY="_________"
-SENDER_EMAIL_ADDRESS="you@example.com"
-SENDGRID_API_KEY="__________"
+TWITTER_ACCESS_TOKEN="_________"
+TWITTER_ACCESS_TOKEN_SECRET="_________"
+TWITTER_API_KEY="_________"
+TWITTER_API_KEY_SECRET="_________"
+
+YELP_API_KEY="_________"
+
+NYT_API_KEY="_________"
+
+FLASK_PASSWORD="_________"
+FLASK_APP=web_app
 ```
 
 
