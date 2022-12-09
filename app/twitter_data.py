@@ -26,7 +26,7 @@ def twitterAPIfunction(TWITTER_ACCESS_TOKEN_para, TWITTER_ACCESS_TOKEN_SECRET_pa
         cursor = tweepy.Cursor(api.search_tweets, q = twitterItem, result_type = "popular", tweet_mode = "extended", wait_on_rate_limit = True).items(numberOfTweets)
 
     #create tweet class which is used to store data for each tweet
-    class tweet:
+    class Tweet:
         def __init__(self, dateParameter, likesParameter, retweetsParameter, commentsParameter, textParameter):
             self.dateUnedited = dateParameter
             self.date = str(dateParameter).split()[0]
@@ -59,7 +59,7 @@ def twitterAPIfunction(TWITTER_ACCESS_TOKEN_para, TWITTER_ACCESS_TOKEN_SECRET_pa
 
     #collect tweet data
     for i in cursor:
-        tweetsList.append(tweet(i.created_at, i.favorite_count, i.retweet_count, "None", i.full_text))
+        tweetsList.append(Tweet(i.created_at, i.favorite_count, i.retweet_count, "None", i.full_text))
     
     #function used to print tweet data
     def printTweetData(tweetParameter):
