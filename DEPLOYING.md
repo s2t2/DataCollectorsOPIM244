@@ -10,7 +10,7 @@ heroku login # just a one-time thing when you use heroku for the first time
 heroku apps # at this time, results might be empty-ish
 ```
 
-> NOTE: some students have reported that when running `heroku login` in Git Bash, it hangs after successfully logging them in. If this is the case for you, close that Git Bash window and when you open a new one you should be all set.
+> NOTE: some people have reported that when running `heroku login` in Git Bash, it hangs after successfully logging them in. If this is the case for you, close that Git Bash window and when you open a new one you should be all set.
 
 > NOTE: if you're not able to get `git` and/or `heroku` installed, you may be able to explore the online Heroku interface to perform actions like creating and managing the server, and [auto-deploying](https://devcenter.heroku.com/articles/github-integration#automatic-deploys) your code straight from GitHub (instead of using the commands below).
 
@@ -52,11 +52,17 @@ heroku config # at this time, results might be empty-ish
 # set environment variables:
 heroku config:set APP_ENV="production"
 
-heroku config:set ALPHAVANTAGE_API_KEY="______"
-heroku config:set DEFAULT_SYMBOL="GOOGL"
+heroku config:set TWITTER_ACCESS_TOKEN="_________"
+heroku config:set TWITTER_ACCESS_TOKEN_SECRET="_________"
+heroku config:set TWITTER_API_KEY="_________"
+heroku config:set TWITTER_API_KEY_SECRET="_________"
 
-heroku config:set SENDGRID_API_KEY="_________"
-heroku config:set SENDER_EMAIL_ADDRESS="someone@gmail.com"
+heroku config:set YELP_API_KEY="_________"
+
+heroku config:set NYT_API_KEY="_________"
+
+heroku config:set FLASK_PASSWORD="_________"
+heroku config:set FLASK_APP="web_app"
 ```
 
 At this point, you should be able to verify the production environment has been configured with the proper environment variable values:
@@ -97,10 +103,6 @@ Finally, provision and configure the server's "Heroku Scheduler" resource to run
 From the "Resources" tab in your application's Heroku dashboard, search for an add-on called "Heroku Scheduler" and provision the server with a free plan.
 
 > NOTE: if doing this for the first time, Heroku may ask you to provide billing info. Feel free (but not obligated) to provide it, as the services we are using to complete this exercise are all free, and your card should not be charged!
-
-Finally, click on the provisioned "Heroku Scheduler" resource from the "Resources" tab, then click to "Add a new Job". When adding the job, choose to execute the designated python command (`python -m app.unemployment_email`) at a scheduled interval (e.g. every 10 minutes), and finally click to "Save" the job:
-
-> NOTE: really we would probably schedule this report to get sent once per month, but we're choosing every 10 minutes just for demo purposes.
 
 ## It's Alive!
 
