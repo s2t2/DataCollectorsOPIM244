@@ -48,63 +48,14 @@ FLASK_PASSWORD="_________"
 FLASK_APP=web_app
 ```
 
-
-## Usage
-
-Run an example script:
-
-```sh
-python app/my_script.py
-```
-
-Run the unemployment report:
-
-```sh
-python -m app.unemployment
-```
-
-Run stocks report:
-
-```sh
-python -m app.stocks
-```
-
-### Web App
+### Usage
 
 Run the web app (then view in the browser at http://localhost:5000/):
 
 ```sh
-# Mac OS:
-FLASK_APP=web_app flask run
+# ensure FLASK_APP=web_app is in the ".env" file
 
-# Windows OS:
-# ... if `export` doesn't work for you, try `set` instead
-# ... or set FLASK_APP variable via ".env" file
-export FLASK_APP=web_app
 flask run
-```
-
-### Email Sending
-
-Run the email service to send an example email and see if everything is working:
-
-```sh
-python -m app.email_service
-```
-
-Send the unemployment report via email:
-
-```sh
-python -m app.unemployment_email
-```
-
-Send the stocks report via email:
-
-```sh
-python -m app.stocks_email
-
-# or in production mode:
-APP_ENV="production" DEFAULT_SYMBOL="GOOGL" python -m app.stocks_email
 ```
 
 ## Testing

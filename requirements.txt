@@ -11,11 +11,11 @@ tweepy==4.5.0
 Werkzeug==1.0.1
 wincertstore==0.2
 openpyxl==3.0.5
-facebook-sdk==3.1.0
 python-dotenv
 yelpapi
 pandas
 pynytimes
+pytest
 
 
 
