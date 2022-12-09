@@ -89,20 +89,8 @@ Once you've deployed the source code to the Heroku server, login to the server t
 heroku run bash # login to the server
 # ... whoami # see that you are not on your local computer anymore
 # ... ls -al # optionally see the files, nice!
-# ... python -m app.unemployment_email # see the output, nice!
 # ... exit # logout
-
-# or alternatively, run it from your computer, in "detached" mode:
-heroku run "python -m app.unemployment_email"
 ```
-
-## Scheduling the Script
-
-Finally, provision and configure the server's "Heroku Scheduler" resource to run the notification script at specified intervals, for example once per day.
-
-From the "Resources" tab in your application's Heroku dashboard, search for an add-on called "Heroku Scheduler" and provision the server with a free plan.
-
-> NOTE: if doing this for the first time, Heroku may ask you to provide billing info. Feel free (but not obligated) to provide it, as the services we are using to complete this exercise are all free, and your card should not be charged!
 
 ## It's Alive!
 
