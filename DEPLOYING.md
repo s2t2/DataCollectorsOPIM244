@@ -95,5 +95,3 @@ heroku run bash # login to the server
 ## It's Alive!
 
 Congratulations, you have just deployed a software service!
-
-Monitor your inbox over the specified time period and witness your notification service in action!
