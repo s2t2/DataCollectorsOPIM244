@@ -1,7 +1,7 @@
 # Data Collectors OPIM 244
 https://datacollectors.herokuapp.com/
 
-This web application is my final project for Managing Business Application Development in Python (OPIM 244) at Georgetown University. The application is a set of data collectors intended to assist small businesses and student consultants.
+This web application is my final project for Managing Business Applications in Python (OPIM 244) at Georgetown University. The application is a set of data collectors intended to assist small businesses and student consultants.
 
 ## Setup
 
